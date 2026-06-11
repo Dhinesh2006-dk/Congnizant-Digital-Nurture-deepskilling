@@ -6,7 +6,6 @@ public class FactoryMethodTest
                 new WordFactory();
         Document word =
                 wordFactory.createDocument();
-
         word.open();
         DocumentFactory pdfFactory =
                 new PdfFactory();
