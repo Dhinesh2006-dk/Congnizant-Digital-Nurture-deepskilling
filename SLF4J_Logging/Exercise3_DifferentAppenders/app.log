@@ -1,0 +1,8 @@
+16:39:02.443 [main] DEBUG LoggingExample - Debug message
+16:39:02.444 [main] INFO  LoggingExample - Info message
+16:39:02.444 [main] WARN  LoggingExample - Warning message
+16:39:02.444 [main] ERROR LoggingExample - Error message
+16:41:05.612 [main] DEBUG LoggingExample - Debug message
+16:41:05.613 [main] INFO  LoggingExample - Info message
+16:41:05.613 [main] WARN  LoggingExample - Warning message
+16:41:05.613 [main] ERROR LoggingExample - Error message
