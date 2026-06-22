@@ -1,0 +1,62 @@
+Hibernate XML Configuration Concepts
+
+1. SessionFactory
+
+* SessionFactory is responsible for creating Session objects.
+* Only one SessionFactory is generally created for an application.
+* It reads the Hibernate configuration file and manages database connections.
+
+2. Session
+
+* Session acts as a connection between the Java application and the database.
+* Used to perform CRUD operations.
+
+3. Transaction
+
+* Transaction ensures database operations are executed safely.
+* It maintains data consistency.
+
+4. beginTransaction()
+
+* Starts a transaction.
+* Example:
+  Transaction tx = session.beginTransaction();
+
+5. commit()
+
+* Saves all changes permanently to the database.
+* Example:
+  tx.commit();
+
+6. rollback()
+
+* Reverts changes if an error occurs.
+* Example:
+  tx.rollback();
+
+7. session.save()
+
+* Inserts an object into the database.
+* Example:
+  session.save(student);
+
+8. session.createQuery().list()
+
+* Retrieves multiple records from the database.
+* Example:
+  List<Student> list = session.createQuery("FROM Student").list();
+
+9. session.get()
+
+* Retrieves a single record using the primary key.
+* Example:
+  Student s = session.get(Student.class, 1);
+
+10. session.delete()
+
+* Deletes a record from the database.
+* Example:
+  session.delete(student);
+
+Hibernate XML Flow:
+Configuration File → SessionFactory → Session → Transaction → CRUD Operations → Commit/Rollback → Close Session
