@@ -1,0 +1,140 @@
+Hibernate Annotation Configuration Concepts
+
+1. @Entity
+
+* @Entity indicates that the class is a Hibernate/JPA entity.
+* Hibernate maps this class to a database table.
+
+Example:
+@Entity
+public class Employee {
+}
+
+2. @Table
+
+* @Table specifies the database table name.
+* It maps the entity class to a table.
+
+Example:
+@Entity
+@Table(name="employee")
+public class Employee {
+}
+
+3. @Id
+
+* @Id specifies the primary key of the table.
+
+Example:
+@Id
+private int id;
+
+4. @GeneratedValue
+
+* @GeneratedValue automatically generates primary key values.
+* Commonly used with AUTO, IDENTITY, SEQUENCE, or TABLE strategies.
+
+Example:
+@Id
+@GeneratedValue
+private int id;
+
+5. @Column
+
+* @Column maps a class field to a database column.
+
+Example:
+@Column(name="first_name")
+private String firstName;
+
+6. Hibernate Configuration File (hibernate.cfg.xml)
+
+The hibernate.cfg.xml file contains database connection and Hibernate settings.
+
+Example:
+
+<hibernate-configuration>
+ <session-factory>
+
+  <property name="hibernate.dialect">
+   org.hibernate.dialect.MySQLDialect
+  </property>
+
+  <property name="hibernate.connection.driver_class">
+   com.mysql.cj.jdbc.Driver
+  </property>
+
+  <property name="hibernate.connection.url">
+   jdbc:mysql://localhost:3306/company
+  </property>
+
+  <property name="hibernate.connection.username">
+   root
+  </property>
+
+  <property name="hibernate.connection.password">
+   root
+  </property>
+
+ </session-factory>
+</hibernate-configuration>
+
+7. Dialect
+
+* Dialect tells Hibernate which database is being used.
+* Generates database-specific SQL statements.
+
+Example:
+org.hibernate.dialect.MySQLDialect
+
+8. Driver
+
+* JDBC Driver used to connect Java and database.
+
+Example:
+com.mysql.cj.jdbc.Driver
+
+9. Connection URL
+
+* Specifies database location and schema.
+
+Example:
+jdbc:mysql://localhost:3306/company
+
+10. Username
+
+* Database username.
+
+Example:
+root
+
+11. Password
+
+* Database password.
+
+Example:
+root
+
+Hibernate Annotation Flow
+
+Entity Class
+|
+v
+Annotations
+(@Entity, @Table, @Id, @Column)
+|
+v
+Hibernate Configuration
+(hibernate.cfg.xml)
+|
+v
+SessionFactory
+|
+v
+Session
+|
+v
+Database Operations
+|
+v
+Commit / Rollback
