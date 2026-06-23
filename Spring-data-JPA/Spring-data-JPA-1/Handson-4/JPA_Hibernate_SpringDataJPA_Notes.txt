@@ -1,0 +1,147 @@
+Difference Between JPA, Hibernate and Spring Data JPA
+
+1. Java Persistence API (JPA)
+
+* JPA stands for Java Persistence API.
+* It is a specification (JSR 338) for persisting Java objects into databases.
+* JPA only defines rules and standards.
+* JPA does not provide any implementation.
+* Hibernate, EclipseLink, and OpenJPA are implementations of JPA.
+
+Advantages:
+
+* Standard API for ORM.
+* Database independent.
+* Improves portability.
+
+Example:
+
+@Entity
+public class Employee {
+
+```
+@Id
+private int id;
+
+private String name;
+```
+
+}
+
+---
+
+2. Hibernate
+
+* Hibernate is an ORM (Object Relational Mapping) framework.
+* Hibernate is one of the implementations of JPA.
+* It converts Java objects into database records and vice versa.
+* Provides SessionFactory, Session, Transaction, HQL, Caching, etc.
+
+Advantages:
+
+* Reduces JDBC code.
+* Supports caching.
+* Database independent queries.
+* Open source and lightweight.
+
+Hibernate Example:
+
+Session session = factory.openSession();
+
+Transaction tx = session.beginTransaction();
+
+session.save(employee);
+
+tx.commit();
+
+session.close();
+
+---
+
+3. Spring Data JPA
+
+* Spring Data JPA is not an ORM framework.
+* Spring Data JPA does not implement JPA.
+* It sits on top of Hibernate or another JPA provider.
+* It removes boilerplate code.
+* Automatically manages transactions and repository operations.
+
+Advantages:
+
+* Less code.
+* Faster development.
+* Automatic CRUD operations.
+* Repository pattern support.
+
+Spring Data JPA Example:
+
+public interface EmployeeRepository
+extends JpaRepository<Employee,Integer> {
+
+}
+
+@Service
+public class EmployeeService {
+
+```
+@Autowired
+private EmployeeRepository employeeRepository;
+
+@Transactional
+public void addEmployee(Employee employee) {
+
+    employeeRepository.save(employee);
+
+}
+```
+
+}
+
+---
+
+Comparison Table
+
+JPA
+
+* Type: Specification
+* Implementation: No
+* ORM Tool: No
+* Purpose: Defines standards
+
+Hibernate
+
+* Type: Framework
+* Implementation: Yes
+* ORM Tool: Yes
+* Purpose: Implements JPA
+
+Spring Data JPA
+
+* Type: Abstraction Layer
+* Implementation: No
+* ORM Tool: No
+* Purpose: Reduces boilerplate code
+
+---
+
+Architecture
+
+Application
+|
+v
+Spring Data JPA
+|
+v
+Hibernate
+|
+v
+JPA Specification
+|
+v
+Database
+
+Conclusion
+
+JPA defines the rules.
+Hibernate implements those rules.
+Spring Data JPA simplifies Hibernate/JPA development by reducing code and automatically managing common database operations.
