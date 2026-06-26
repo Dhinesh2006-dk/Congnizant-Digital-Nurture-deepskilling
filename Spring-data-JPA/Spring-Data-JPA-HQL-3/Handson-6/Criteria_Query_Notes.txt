@@ -1,0 +1,89 @@
+    HANDS ON 6 – CRITERIA QUERY
+
+## What is Criteria Query?
+
+Criteria Query is a feature provided by JPA and Hibernate that helps build queries dynamically using Java code instead of writing HQL or SQL statements manually.
+
+## Why do we need Criteria Query?
+
+In many real-world applications, search conditions are not fixed.
+
+Example:
+Amazon Product Search
+
+A user searches for "Laptop" and may apply any combination of the following filters:
+
+• Customer Rating
+• Hard Disk Size
+• RAM Size
+• CPU Speed
+• Operating System
+• Weight
+• Processor Type
+
+The WHERE clause changes depending on the filters selected by the user.
+
+Example:
+
+Case 1:
+SELECT * FROM product
+WHERE ram = '8GB';
+
+Case 2:
+SELECT * FROM product
+WHERE ram = '8GB'
+AND hdd = '1TB';
+
+Case 3:
+SELECT * FROM product
+WHERE ram = '8GB'
+AND hdd = '1TB'
+AND os = 'Windows 11';
+
+Since the conditions are dynamic, writing fixed HQL queries becomes difficult.
+
+Criteria Query solves this problem by allowing conditions to be added programmatically.
+
+## Important Classes
+
+1. CriteriaBuilder
+   Used to create query conditions.
+
+2. CriteriaQuery
+   Represents the query being built.
+
+3. Root
+   Represents the entity/table.
+
+4. TypedQuery
+   Executes the criteria query.
+
+## Sample Criteria Query
+
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+
+CriteriaQuery<Employee> cq =
+cb.createQuery(Employee.class);
+
+Root<Employee> root =
+cq.from(Employee.class);
+
+cq.select(root);
+
+TypedQuery<Employee> query =
+entityManager.createQuery(cq);
+
+List<Employee> employees =
+query.getResultList();
+
+## Advantages
+
+• Dynamic query generation
+• Type-safe queries
+• Easier maintenance
+• Database independent
+• Reduces string-based HQL errors
+
+## Conclusion
+
+Criteria Query is useful when search filters are dynamic and not known beforehand. It allows developers to construct queries programmatically based on user-selected criteria, making it ideal for applications like Amazon product search, Flipkart filtering, and advanced search screens.
