@@ -1,0 +1,21 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m             [2m (v2.7.18)[0;39m
+
+260630|22:01:25.755|main                | INFO|.s.SpringLearnApplication|              logStarting|Starting SpringLearnApplication v0.0.1-SNAPSHOT using Java 23.0.2 on MacBook-Air-3.local with PID 7149 (/Users/dhineshkumar/Documents/Spring-Rest-JWT/Handson-4/target/spring-learn-0.0.1-SNAPSHOT.jar started by dhineshkumar in /Users/dhineshkumar/Documents/Spring-Rest-JWT/Handson-4)
+260630|22:01:25.758|main                |DEBUG|.s.SpringLearnApplication|              logStarting|Running with Spring Boot v2.7.18, Spring v5.3.31
+260630|22:01:25.758|main                | INFO|.s.SpringLearnApplication|    logStartupProfileInfo|No active profile set, falling back to 1 default profile: "default"
+260630|22:01:26.238|main                | INFO|s.b.w.e.t.TomcatWebServer|               initialize|Tomcat initialized with port(s): 8090 (http)
+260630|22:01:26.243|main                | INFO|o.a.c.c.StandardService  |                      log|Starting service [Tomcat]
+260630|22:01:26.243|main                | INFO|o.a.c.core.StandardEngine|                      log|Starting Servlet engine: [Apache Tomcat/9.0.83]
+260630|22:01:26.275|main                | INFO|o.a.c.c.C.[.[.[/]        |                      log|Initializing Spring embedded WebApplicationContext
+260630|22:01:26.275|main                | INFO|bServerApplicationContext|prepareWebApplicationContext|Root WebApplicationContext: initialization completed in 492 ms
+260630|22:01:26.411|main                | INFO|c.c.s.s.SecurityConfig   |          passwordEncoder|START
+260630|22:01:26.582|main                | INFO|efaultSecurityFilterChain|                   <init>|Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79da1ec0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19fb8826, org.springframework.security.web.context.SecurityContextPersistenceFilter@14b030a0, org.springframework.security.web.header.HeaderWriterFilter@10993713, org.springframework.security.web.authentication.logout.LogoutFilter@ed3068a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e11485, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@422c3c7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56bca85b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@192d74fb, org.springframework.security.web.session.SessionManagementFilter@4ee37ca3, org.springframework.security.web.access.ExceptionTranslationFilter@5af3a0f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fc5e095]
+260630|22:01:26.718|main                | INFO|s.b.w.e.t.TomcatWebServer|                    start|Tomcat started on port(s): 8090 (http) with context path ''
+260630|22:01:26.721|main                | INFO|.s.SpringLearnApplication|               logStarted|Started SpringLearnApplication in 1.233 seconds (JVM running for 1.555)
