@@ -1,0 +1,5 @@
+com/cognizant/productservice/controller/ProductController.class
+com/cognizant/productservice/ProductServiceApplication.class
+com/cognizant/productservice/service/ProductService.class
+com/cognizant/productservice/entity/Product.class
+com/cognizant/productservice/repository/ProductRepository.class

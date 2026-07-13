@@ -1,0 +1,7 @@
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/InventoryServiceApplication.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/controller/InventoryController.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/dto/Product.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/entity/Inventory.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/feign/ProductClient.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/repository/InventoryRepository.java
+/Users/dhineshkumar/Documents/Microservices-3/Handson-2/Inventory-Service/src/main/java/com/cognizant/inventoryservice/service/InventoryService.java
